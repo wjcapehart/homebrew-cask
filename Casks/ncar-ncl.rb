@@ -19,9 +19,9 @@ cask 'ncar-ncl' do
   depends_on formula: 'gcc'
   depends_on macos: '>= :el_capitan'
 
-  artifact 'include', target: '/usr/local/ncl-6.3.0/include'
-  artifact 'bin', target: '/usr/local/ncl-6.3.0/bin'
-  artifact 'lib', target: '/usr/local/ncl-6.3.0/lib'
+  artifact 'include', target: '/usr/local/ncl-6.4.0/include'
+  artifact 'bin', target: '/usr/local/ncl-6.4.0/bin'
+  artifact 'lib', target: '/usr/local/ncl-6.4.0/lib'
 
   caveats <<-EOS.undent
     To use ncar-ncl, you must add the $NCARG_ROOT/bin directory
@@ -35,7 +35,7 @@ cask 'ncar-ncl' do
     You may also need to modify your DYLD_FALLBACK_LIBRARY_PATH
     environment variable:
 
-    export DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.3.dylib)):$DYLD_FALLBACK_LIBRARY_PATH
+    export DYLD_FALLBACK_LIBRARY_PATH=$(dirname $(gfortran --print-file-name libgfortran.4.dylib)):$DYLD_FALLBACK_LIBRARY_PATH
 
     For other information, please see:
     https://www.ncl.ucar.edu/Download/macosx.shtml
